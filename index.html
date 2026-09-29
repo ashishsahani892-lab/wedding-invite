@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#4a091b">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Baloo+2:wght@600;800&family=Playfair+Display:ital@1&family=Great+Vibes&family=Noto+Serif+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+
+  <meta name="description" content="मनीष और प्रियंका के शुभ विवाह में आपको सादर आमंत्रित किया जाता है। 25 नवंबर 2026, कृष्णा लॉन, महराजगंज।">
+
+  <!-- Social preview (WhatsApp / Facebook) -->
+  <meta property="og:title" content="मनीष ❤️ प्रियंका | शुभ विवाह निमंत्रण">
+  <meta property="og:description" content="25 नवंबर 2026 • शाम 6:00 बजे • कृष्णा लॉन, मुजुरी चौराहा, महराजगंज">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://ashishsahani892-lab.github.io/wedding-invite-premium/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Add to Home Screen -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="मनीष ❤️ प्रियंका">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="icon" type="image/png" href="assets/favicon-mono.png">
+
+  <title>मनीष ❤️ प्रियंका | शुभ विवाह</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       OPENING SCREEN
+  ========================== -->
+
+  <section id="opening" class="floral-frame">
+
+    <div class="floral-frame-alt"></div>
+
+    <div class="ganesha-wrap">
+
+      <svg class="ganesha-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="श्री गणेश">
+        <defs>
+          <radialGradient id="auraGrad" cx="50%" cy="45%" r="60%">
+            <stop offset="0%" stop-color="#f5d99b" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#f5d99b" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+
+        <circle class="ganesha-aura" cx="100" cy="95" r="85" fill="url(#auraGrad)"/>
+
+        <g fill="#e7a6a6" stroke="#d8aa58" stroke-width="1.5" opacity="0.95">
+          <path d="M60,170 Q100,150 140,170 Q120,190 100,190 Q80,190 60,170 Z"/>
+          <path d="M45,160 Q75,150 90,170 Q65,178 45,160 Z"/>
+          <path d="M155,160 Q125,150 110,170 Q135,178 155,160 Z"/>
+        </g>
+
+        <ellipse class="ganesha-ear-left" cx="55" cy="85" rx="26" ry="32" fill="#d8aa58"/>
+        <ellipse class="ganesha-ear-right" cx="145" cy="85" rx="26" ry="32" fill="#d8aa58"/>
+
+        <circle cx="100" cy="80" r="48" fill="#e2b761" stroke="#f5d99b" stroke-width="2"/>
+
+        <path d="M75,45 L100,15 L125,45 Q100,35 75,45 Z" fill="#f5d99b" stroke="#a97731" stroke-width="2"/>
+        <circle cx="100" cy="18" r="6" fill="#d8aa58"/>
+
+        <circle cx="85" cy="80" r="4" fill="#26030d"/>
+        <circle cx="115" cy="80" r="4" fill="#26030d"/>
+
+        <path class="ganesha-trunk" d="M100,105 Q95,130 110,150 Q118,160 108,168" stroke="#a97731" stroke-width="14" fill="none" stroke-linecap="round"/>
+
+        <path d="M100,115 L92,128" stroke="#fff8ea" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+
+      <div class="ganesha-sparkles">
+        <span>✦</span><span>✦</span><span>✦</span><span>✦</span>
+      </div>
+
+    </div>
+
+    <p class="small-title">
+      ॥ श्री गणेशाय नमः ॥
+    </p>
+
+    <h1>
+      शुभ विवाह
+    </h1>
+
+    <div class="couple-name">
+      Manish
+      <span>♥</span>
+      Priyanka
+    </div>
+
+    <p class="family-name">
+      Manish Sahani • Priyanka Sahani
+    </p>
+
+    <p class="opening-text">
+      दो दिल • एक रिश्ता • जीवनभर का साथ
+    </p>
+
+    <p id="guestGreeting" class="guest-greeting hidden"></p>
+
+    <button id="openInvitation">
+      💌 निमंत्रण खोलें
+    </button>
+
+    <p class="blessing">
+      आपका स्नेह एवं आशीर्वाद हमारे लिए अनमोल है
+    </p>
+
+  </section>
+
+
+  <!-- =========================
+       MAIN INVITATION
+  ========================== -->
+
+  <main id="invitation" class="hidden">
+
+
+    <!-- HERO -->
+
+    <section class="hero floral-frame">
+
+      <div class="floral-frame-alt"></div>
+
+      <div class="hero-content">
+
+        <div class="shiv-parvati-wrap">
+
+          <svg class="shiv-parvati-svg" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="शिव और पार्वती">
+            <defs>
+              <radialGradient id="spAuraGrad" cx="50%" cy="45%" r="60%">
+                <stop offset="0%" stop-color="#f5d99b" stop-opacity="0.6"/>
+                <stop offset="100%" stop-color="#f5d99b" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+
+            <ellipse class="shiv-parvati-aura" cx="100" cy="80" rx="95" ry="70" fill="url(#spAuraGrad)"/>
+
+            <g fill="#e7a6a6" stroke="#d8aa58" stroke-width="1.5" opacity="0.95">
+              <path d="M40,138 Q100,118 160,138 Q130,150 100,150 Q70,150 40,138 Z"/>
+            </g>
+
+            <!-- Shiva: crescent moon + trident -->
+            <g>
+              <path d="M56,5 A9,9 0 0,0 56,23 A5,9 0 0,1 56,5 Z" fill="#f5d99b" transform="translate(-4,0)"/>
+              <path class="sp-trident" d="M74,28 L74,8 M66,16 L82,16 M69,10 L74,4 L79,10" stroke="#f5d99b" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="62" cy="72" r="38" fill="#e2b761" stroke="#f5d99b" stroke-width="2"/>
+              <circle cx="54" cy="72" r="3.4" fill="#26030d"/>
+              <circle cx="70" cy="72" r="3.4" fill="#26030d"/>
+              <circle cx="62" cy="60" r="2.6" fill="#a97731"/>
+            </g>
+
+            <!-- Parvati: small crown -->
+            <g>
+              <path d="M120,26 L128,8 L138,20 L148,8 L156,26 Q138,18 120,26 Z" fill="#d8aa58"/>
+              <circle cx="138" cy="72" r="38" fill="#e2b761" stroke="#f5d99b" stroke-width="2"/>
+              <circle cx="130" cy="72" r="3.4" fill="#26030d"/>
+              <circle cx="146" cy="72" r="3.4" fill="#26030d"/>
+              <circle cx="138" cy="60" r="2.6" fill="#a97731"/>
+            </g>
+
+            <path d="M96,80 Q100,86 104,80" stroke="#a97731" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          </svg>
+
+          <div class="sp-sparkles">
+            <span>✦</span><span>✦</span><span>✦</span>
+          </div>
+
+        </div>
+
+        <p class="small-title">
+          ॥ श्री गणेशाय नमः ॥
+        </p>
+
+        <p>
+          सप्रेम आमंत्रण
+        </p>
+
+        <h2>
+          Manish
+        </h2>
+
+        <div class="heart">
+          ♥
+        </div>
+
+        <h2>
+          Priyanka
+        </h2>
+
+        <p class="hero-message">
+          के शुभ विवाह के पावन अवसर पर
+        </p>
+
+        <div class="date-box">
+          25 नवंबर 2026
+          <br>
+          <span>सायं 6:00 बजे</span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- INVITATION MESSAGE -->
+
+    <section class="section invitation-message">
+
+      <div class="ornament">
+        ❀ · ❀ · ❀
+      </div>
+
+      <p>
+        ईश्वर की असीम कृपा से
+      </p>
+
+      <p>
+        हम अपने जीवन के इस मंगल अवसर को
+      </p>
+
+      <p>
+        <strong>
+          आपके स्नेह, शुभकामनाओं और आशीर्वाद
+        </strong>
+      </p>
+
+      <p>
+        के साथ मनाना चाहते हैं।
+      </p>
+
+      <p>
+        कृपया सपरिवार पधारकर
+        नवविवाहित जोड़े को अपना आशीर्वाद प्रदान करें।
+      </p>
+
+      <div class="ornament">
+        ❀ · ❀ · ❀
+      </div>
+
+    </section>
+
+
+    <!-- INVITER / HOST -->
+
+    <section class="section inviter-section">
+
+      <div class="ornament">
+        ❀ · ❀ · ❀
+      </div>
+
+      <p class="small-title">
+        सादर आमंत्रणकर्ता
+      </p>
+
+      <p class="inviter-names">
+        श्री रामायण प्रसाद
+        <span>•</span>
+        श्रीमती संयोगिता देवी
+      </p>
+
+      <p class="inviter-sub">
+        (वर मनीष के माता-पिता)
+      </p>
+
+      <p>
+        अपने सुपुत्र मनीष के शुभ विवाह के
+        इस मंगल अवसर पर आपको सपरिवार पधारकर
+        आशीर्वाद देने का सादर आमंत्रण देते हैं।
+      </p>
+
+      <div class="ornament">
+        ❀ · ❀ · ❀
+      </div>
+
+    </section>
+
+
+    <!-- HALDI -->
+
+    <section class="event-section">
+
+      <p class="small-title">
+        🌼 मंगल अवसर 🌼
+      </p>
+
+      <h3>
+        हल्दी समारोह
+      </h3>
+
+      <div class="event-card floral-frame">
+
+        <div class="event-icon">
+          ✿
+        </div>
+
+        <h4>
+          हल्दी
+        </h4>
+
+        <p class="event-date">
+          24 नवंबर 2026
+        </p>
+
+        <p>
+          परिवार एवं प्रियजनों के साथ
+        </p>
+
+        <div class="gold-line"></div>
+
+        <p>
+          प्रेम, हंसी और खुशियों से
+          सजे इस खूबसूरत दिन में
+          आपका स्वागत है।
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- WEDDING -->
+
+    <section class="event-section wedding-section">
+
+      <p class="small-title">
+        💍 शुभ विवाह 💍
+      </p>
+
+      <h3>
+        विवाह समारोह
+      </h3>
+
+      <div class="event-card floral-frame">
+
+        <div class="event-icon">
+          ॐ
+        </div>
+
+        <h4>
+          मनीष ❤️ प्रियंका
+        </h4>
+
+        <p class="event-date">
+          25 नवंबर 2026
+        </p>
+
+        <p class="event-time">
+          🕕 सायं 6:00 बजे
+        </p>
+
+        <div class="gold-line"></div>
+
+        <p class="venue-title">
+          कृष्णा लॉन
+        </p>
+
+        <p>
+          मुजुरी चौराहा, महराजगंज
+        </p>
+
+        <div class="button-row">
+
+          <a
+            class="map-button"
+            href="https://maps.app.goo.gl/q8EWtJjf4HfJy47Y6?g_st=ic"
+            target="_blank"
+            rel="noopener">
+
+            📍 Google Maps पर स्थान देखें
+
+          </a>
+
+        </div>
+
+        <div class="countdown-card">
+
+          <h3>
+            शुभ मिलन में अब...
+          </h3>
+
+          <div class="countdown">
+
+            <div class="time-box">
+              <span id="days">00</span>
+              <small>दिन</small>
+            </div>
+
+            <div class="time-box">
+              <span id="hours">00</span>
+              <small>घंटे</small>
+            </div>
+
+            <div class="time-box">
+              <span id="minutes">00</span>
+              <small>मिनट</small>
+            </div>
+
+            <div class="time-box">
+              <span id="seconds">00</span>
+              <small>सेकंड</small>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- BABY INVITE MESSAGE -->
+
+    <section class="section baby-message-section">
+
+      <p class="small-title">
+        ❤️ एक प्यारा निमंत्रण ❤️
+      </p>
+
+      <div class="baby-wrap">
+
+        <div class="pop-text" id="popText"></div>
+
+        <p class="baby-name">
+          — दीपांजलि
+        </p>
+
+        <div class="baby-img-frame">
+
+          <img
+            src="assets/baby-invite.png"
+            alt="प्यारा निमंत्रण संदेश"
+            class="baby-img">
+
+          <div class="mini-decor">
+            <span class="mini mini-drum">🥁</span>
+            <span class="mini mini-trumpet">🎺</span>
+            <span class="mini mini-monkey">🐒</span>
+            <span class="mini mini-elephant">🐘</span>
+            <span class="mini mini-butterfly">🦋</span>
+            <span class="mini mini-swan">🦢</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- MESSAGE -->
+
+    <section class="section story">
+
+      <p class="small-title">
+        ❤️ एक नई शुरुआत ❤️
+      </p>
+
+      <h3>
+        दो परिवार • एक उत्सव
+      </h3>
+
+      <p>
+        रिश्तों की मिठास और अपनों के आशीर्वाद
+        से सजे इस खास दिन पर आपकी उपस्थिति
+        हमारे उत्सव को और भी यादगार बनाएगी।
+      </p>
+
+      <div class="quote">
+
+        "जहाँ प्रेम है,
+        वहाँ हर दिन उत्सव है।"
+
+      </div>
+
+    </section>
+
+
+    <!-- WISHES -->
+
+    <section class="section wishes-section">
+
+      <p class="small-title">
+        ❤️ आपकी शुभकामनाएं ❤️
+      </p>
+
+      <h3>
+        अपनी शुभकामनाएं भेजें
+      </h3>
+
+      <div class="wishes-form floral-frame">
+
+        <input
+          type="text"
+          id="wishName"
+          placeholder="आपका नाम"
+          maxlength="60">
+
+        <textarea
+          id="wishMessage"
+          rows="3"
+          maxlength="400"
+          placeholder="अपनी शुभकामनाएं यहाँ लिखें..."></textarea>
+
+        <div class="wishes-buttons">
+
+          <button id="sendWish" class="wish-button">
+            💬 शुभकामनाएं भेजें
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact-section">
+
+      <p class="small-title">
+        सादर आमंत्रण
+      </p>
+
+      <h3>
+        आपका इंतज़ार रहेगा ❤️
+      </h3>
+
+      <p>
+        किसी भी जानकारी के लिए संपर्क करें
+      </p>
+
+
+      <div class="button-row">
+        <a class="map-button" href="https://maps.app.goo.gl/q8EWtJjf4HfJy47Y6?g_st=ic" target="_blank" rel="noopener">
+          📍 विवाह स्थल का रास्ता देखें
+        </a>
+      </div>
+
+      <div class="contact-list">
+
+        <div class="contact-row">
+          <div class="contact-info">
+            <span class="contact-name">श्री रामायण प्रसाद</span>
+            <span class="contact-role">(वर के पिता)</span>
+            <span class="contact-number">9792091604</span>
+          </div>
+          <div class="contact-actions">
+            <a class="icon-btn call-btn" href="tel:9792091604" aria-label="कॉल करें">📞</a>
+            <a class="icon-btn whatsapp-btn" href="https://wa.me/919792091604" target="_blank" aria-label="WhatsApp पर संदेश भेजें">💬</a>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <div class="contact-info">
+            <span class="contact-name">मनीष साहनी</span>
+            <span class="contact-role">(वर)</span>
+            <span class="contact-number">9580320282</span>
+          </div>
+          <div class="contact-actions">
+            <a class="icon-btn call-btn" href="tel:9580320282" aria-label="कॉल करें">📞</a>
+            <a class="icon-btn whatsapp-btn" href="https://wa.me/919580320282" target="_blank" aria-label="WhatsApp पर संदेश भेजें">💬</a>
+          </div>
+        </div>
+
+        <div class="contact-row">
+          <div class="contact-info">
+            <span class="contact-name">आशीष साहनी</span>
+            <span class="contact-number">9580031687</span>
+          </div>
+          <div class="contact-actions">
+            <a class="icon-btn call-btn" href="tel:9580031687" aria-label="कॉल करें">📞</a>
+            <a class="icon-btn whatsapp-btn" href="https://wa.me/919580031687" target="_blank" aria-label="WhatsApp पर संदेश भेजें">💬</a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+      <h4>
+        मनीष ♥ प्रियंका
+      </h4>
+
+      <p class="family-line">
+        साहनी परिवार
+      </p>
+
+      <p>
+        25 नवंबर 2026 • महराजगंज
+      </p>
+
+      <div>
+        ✦
+      </div>
+
+    </footer>
+
+  </main>
+
+
+  <!-- Background instrumental music.
+       Add your own royalty-free instrumental file to the repo at
+       music/mangal-dhwani.mp3 (or change the path below to match). -->
+  <audio id="bgMusic" loop preload="none">
+    <source src="music/mangal-dhwani.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="musicToggle" class="music-toggle" aria-label="पृष्ठभूमि संगीत चालू/बंद करें" title="संगीत चालू/बंद करें">
+    🔈
+  </button>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
